@@ -1,4 +1,5 @@
-const journalEntry = [
+//Daily Journal 2//
+const journalEntries = [
   {
     date: "1/16/2020",
     concept: "Manipulating DOM",
@@ -18,8 +19,21 @@ const journalEntry = [
     mood: "Okay"
   }
 ];
-const journalEntries = [];
+console.log(journalEntries)
 
-journalEntries.push(journalEntry);
+//Daily Journal 3//
+const journalEntryComponent = (entry) => {
+  return `
+  <h1>${taco.date}</h1>
+  <section>${taco.concept}</section>
+  <aside>${taco.entry}</aside>
+  <aside>${taco.mood}</aside>
+  `
+}
 
-console.log(journalEntries);
+//for loop
+
+
+//Store a reference to an existing HTML element (Where the journal entries will go)
+// const journalContainer = document.querySelector("#entryLog")
+// journalContainer.innerHTML = journalEntryComponent()
