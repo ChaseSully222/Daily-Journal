@@ -30,9 +30,12 @@ const makeJournalEntryComponent = (journalEntry) => {
   `
 }
 
-//for each
 
-
-//Store a reference to an existing HTML element (Where the journal entries will go)
-// const journalContainer = document.querySelector("#entryLog")
-// journalContainer.innerHTML = journalEntryComponent()
+const renderJournalEntries = (journal) => {
+  const journalContainer = document.querySelector("#entryLog")
+  journal.forEach(journal => {
+    const journalHTML = makeJournalEntryComponent(journal);
+    journalContainer.innerHTML += journalHTML;
+  })
+}
+ renderJournalEntries(journalEntries)
