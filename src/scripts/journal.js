@@ -1,23 +1,11 @@
-const journalEntries = [
-  {
-    date: "1/16/2020",
-    concept: "Manipulating DOM",
-    entry: "Learned how to manipulate the DOM with querySelector",
-    mood: "Okay"
-  },
-  {
-    date: "1/17/2020",
-    concept: "JavaScript Objects",
-    entry: "Learned what an object is and Object Oriented Programming",
-    mood: "Okay"
-  },
-  {
-    date: "1/17/2020",
-    concept: "Functions & Logic",
-    entry: "Learned about functions and how they are reusable code",
-    mood: "Okay"
-  }
-];
+const getJournalEntries = () => {
+  const getMovies = "http://localhost:3000/entries";
+  fetch(getMovies)
+    .then(resp => resp.json())
+    .then(entriesFromAPI => {
+      renderJournalEntries(entriesFromAPI);
+    });
+};
 
 const makeJournalEntryComponent = journalEntry => {
   return `
@@ -28,8 +16,6 @@ const makeJournalEntryComponent = journalEntry => {
   `;
 };
 
-//Daily Journal 3
-
 const renderJournalEntries = entries => {
   const journalContainer = document.querySelector(".entryLog");
   entries.forEach(journalEntry => {
@@ -37,4 +23,5 @@ const renderJournalEntries = entries => {
     journalContainer.innerHTML += journalEntryHTML;
   });
 };
-renderJournalEntries(journalEntries);
+
+getJournalEntries()

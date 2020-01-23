@@ -1,0 +1,60 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "date": "1/16/2020",
+      "concept": "Manipulating DOM",
+      "entry": "Learned how to manipulate the DOM with querySelector",
+      "mood": "Okay"
+    },
+    {
+      "id": 2,
+      "date": "1/17/2020",
+      "concept": "JavaScript Objects",
+      "entry": "Learned what an object is and Object Oriented Programming",
+      "mood": "Okay"
+    },
+    {
+      "id": 3,
+      "date": "1/17/2020",
+      "concept": "Functions & Logic",
+      "entry": "Learned about functions and how they are reusable code",
+      "mood": "Okay"
+    },
+    {
+      "id": 4,
+      "date": "1/17/2020",
+      "concept": "Debugger",
+      "entry": "Learned how to utilize the debugger to diagnose and resolve errors",
+      "mood": "Okay"
+    },
+    {
+      "id": 5,
+      "date": "1/20/2020",
+      "concept": "Building DOM Components",
+      "entry": "",
+      "mood": "Okay"
+    },
+    {
+      "id": 6,
+      "date": "1/21/2020",
+      "concept": "Building and Using an API",
+      "entry": "Learned about API's, how to create an API and fetch data from that API ",
+      "mood": "Okay"
+    },
+    {
+      "id": 7,
+      "date": "1/22/2020",
+      "concept": "Handing Browser Events",
+      "entry": "Learned about browser events (click, key press, mouse over, etc.)",
+      "mood": "Okay"
+    },
+    {
+      "id": 8,
+      "date": "1/23/2020",
+      "concept": "Modular Code for Team-Based Development",
+      "entry": "Learned about splitting css and js into different files",
+      "mood": "Okay"
+    }
+  ]
+}
