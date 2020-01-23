@@ -1,4 +1,3 @@
-//Daily Journal 2//
 const journalEntries = [
   {
     date: "1/16/2020",
@@ -19,23 +18,23 @@ const journalEntries = [
     mood: "Okay"
   }
 ];
-console.log(journalEntries)
 
-const makeJournalEntryComponent = (journalEntry) => {
+const makeJournalEntryComponent = journalEntry => {
   return `
-  <h1>${journalEntry.date}</h1>
-  <p>${journalEntry.concept}</p>
-  <p>${journalEntry.entry}</p>
-  <p>${journalEntry.mood}</p>
-  `
-}
+  <h1>${journalEntry.concept}</h1>
+  <section>${journalEntry.date}</section>
+  <article>${journalEntry.entry}</article>
+  <article>${journalEntry.mood}</article>
+  `;
+};
 
+//Daily Journal 3
 
-const renderJournalEntries = (journal) => {
-  const journalContainer = document.querySelector("#entryLog")
-  journal.forEach(journal => {
-    const journalHTML = makeJournalEntryComponent(journal);
-    journalContainer.innerHTML += journalHTML;
-  })
-}
- renderJournalEntries(journalEntries)
+const renderJournalEntries = entries => {
+  const journalContainer = document.querySelector(".entryLog");
+  entries.forEach(journalEntry => {
+    const journalEntryHTML = makeJournalEntryComponent(journalEntry);
+    journalContainer.innerHTML += journalEntryHTML;
+  });
+};
+renderJournalEntries(journalEntries);
