@@ -15,23 +15,22 @@ const journalEntries = [
   {
     date: "1/17/2020",
     concept: "Functions & Logic",
-    entry: "Learned about functions and how they are reusale code",
+    entry: "Learned about functions and how they are reusable code",
     mood: "Okay"
   }
 ];
 console.log(journalEntries)
 
-//Daily Journal 3//
-const journalEntryComponent = (entry) => {
+const makeJournalEntryComponent = (journalEntry) => {
   return `
-  <h1>${taco.date}</h1>
-  <section>${taco.concept}</section>
-  <aside>${taco.entry}</aside>
-  <aside>${taco.mood}</aside>
+  <h1>${journalEntry.date}</h1>
+  <p>${journalEntry.concept}</p>
+  <p>${journalEntry.entry}</p>
+  <p>${journalEntry.mood}</p>
   `
 }
 
-//for loop
+//for each
 
 
 //Store a reference to an existing HTML element (Where the journal entries will go)
