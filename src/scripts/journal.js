@@ -3,6 +3,6 @@
     defined in the other JavaScript files.
 */
 
-import API from "./data"
+import {} from "";
 
 API.getJournalEntries().then(renderJournalEntries);

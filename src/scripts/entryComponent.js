@@ -7,4 +7,4 @@ const makeJournalEntryComponent = journalEntry => {
     `;
 };
 
-export default makeJournalEntry;
+export default makeJournalEntryComponent;
