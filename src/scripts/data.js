@@ -6,6 +6,7 @@
 //         renderJournalEntries(entriesFromAPI);
 //       });
 //   };
+
 const API = {
   getJournalEntries() {
     return fetch("http://localhost:3000/entries").then(response =>
@@ -14,4 +15,4 @@ const API = {
   }
 };
 
-export default API; 
+export default API;

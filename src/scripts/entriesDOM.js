@@ -1,4 +1,4 @@
-import makeJournalEntryComponent from "./entryComponent.js"
+import makeJournalEntryComponent from "./entryComponent.js";
 
 const renderJournalEntries = entries => {
   const journalContainer = document.querySelector(".entryLog");
