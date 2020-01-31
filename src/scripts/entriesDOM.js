@@ -1,3 +1,5 @@
+import makeJournalEntryComponent from "./entryComponent.js"
+
 const renderJournalEntries = entries => {
   const journalContainer = document.querySelector(".entryLog");
   entries.forEach(journalEntry => {
