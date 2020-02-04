@@ -32,8 +32,16 @@ const addRecordAddEventListener = () => {
         mood: moodInput.value
       };
 
+      // refactor the lines below to a condensed version, syntax post.then(get).then(render)
       API.addNewEntry(newJournalEntry).then(() => {
         API.getJournalEntries().then(renderJournalEntries);
+
+        // clears input values
+
+        dateInput.value = "";
+        conceptInput.value = "";
+        entryInput.value = "";
+        moodInput.value = "";
       });
     }
   });
