@@ -6,7 +6,6 @@ import API from "./data.js";
 import renderJournalEntries from "./entriesDOM.js";
 
 //Daily Journal 7
-
 const addRecordAddEventListener = () => {
   const recordButton = document.getElementById("recordBtn");
 
