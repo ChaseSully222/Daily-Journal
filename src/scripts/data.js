@@ -1,18 +1,18 @@
-// const getJournalEntries = () => {
-//     const getMovies = "http://localhost:3000/entries";
-//     fetch(getMovies)
-//       .then(resp => resp.json())
-//       .then(entriesFromAPI => {
-//         renderJournalEntries(entriesFromAPI);
-//       });
-//   };
-
 const API = {
   getJournalEntries() {
     return fetch("http://localhost:3000/entries").then(response =>
       response.json()
     );
   },
+  addNewEntry(newJournalEntry) {
+  return fetch("http://localhost:3000/entries", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newJournalEntry)
+    });
+  }
 };
 
 export default API;

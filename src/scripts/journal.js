@@ -15,26 +15,27 @@ const addRecordAddEventListener = () => {
     const entryInput = document.getElementById("journalEntry");
     const moodInput = document.getElementById("moodForTheDay");
 
-    console.log("clicked record");
+    //if else conditional goes here
+    if (dateInput.value === "") {
+      alert("Please add a date");
+    } else if (conceptInput.value === "") {
+      alert("Please add a Concept");
+    } else if (entryInput.value === "") {
+      alert("Please add a Journal Entry");
+    } else if (moodInput.value === "") {
+      alert("How does this make you feel?");
+    } else {
+      const newJournalEntry = {
+        date: dateInput.value,
+        concept: conceptInput.value,
+        entry: entryInput.value,
+        mood: moodInput.value
+      };
 
-    const newJournalEntry = {
-      date: dateInput.value,
-      concept: conceptInput.value,
-      entry: entryInput.value,
-      mood: moodInput.value
-    };
-
-    fetch("http://localhost:3000/entries", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(newJournalEntry)
-    });
-
-    API.addNewEntry(newJournalEntry).then(() => {
-      API.getAllJournalEntries().then(renderJournalEntries);
-    });
+      API.addNewEntry(newJournalEntry).then(() => {
+        API.getJournalEntries().then(renderJournalEntries);
+      });
+    }
   });
 };
 

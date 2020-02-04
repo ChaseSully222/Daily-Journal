@@ -2,79 +2,72 @@
   "entries": [
     {
       "id": 1,
-      "date": "1/16/2020",
+      "date": "2020-01-16",
       "concept": "Manipulating DOM",
       "entry": "Learned how to manipulate the DOM with querySelector",
       "mood": "Okay"
     },
     {
       "id": 2,
-      "date": "1/17/2020",
+      "date": "2020-01-17",
       "concept": "JavaScript Objects",
       "entry": "Learned what an object is and Object Oriented Programming",
       "mood": "Okay"
     },
     {
       "id": 3,
-      "date": "1/17/2020",
+      "date": "2020-01-17",
       "concept": "Functions & Logic",
       "entry": "Learned about functions and how they are reusable code",
       "mood": "Okay"
     },
     {
       "id": 4,
-      "date": "1/17/2020",
+      "date": "2020-01-17",
       "concept": "Debugger",
       "entry": "Learned how to utilize the debugger to diagnose and resolve errors",
       "mood": "Okay"
     },
     {
       "id": 5,
-      "date": "1/20/2020",
+      "date": "2020-01-20",
       "concept": "Building DOM Components",
       "entry": "",
       "mood": "Okay"
     },
     {
       "id": 6,
-      "date": "1/21/2020",
+      "date": "2020-01-21",
       "concept": "Building and Using an API",
       "entry": "Learned about API's, how to create an API and fetch data from that API ",
       "mood": "Okay"
     },
     {
       "id": 7,
-      "date": "1/22/2020",
+      "date": "2020-01-22",
       "concept": "Handing Browser Events",
       "entry": "Learned about browser events (click, key press, mouse over, etc.)",
       "mood": "Okay"
     },
     {
       "id": 8,
-      "date": "1/23/2020",
+      "date": "2020-01-23",
       "concept": "Modular Code for Team-Based Development",
       "entry": "Learned about splitting css and js into different files",
       "mood": "Okay"
     },
     {
       "id": 9,
-      "date": "1/27/2020 - 1/30/2020",
+      "date": "2020-01-27 - 2020-01-30",
       "concept": "Javascript group project",
       "entry": "Further developed Javascript skills while working in a group project. Helps re-enforce previous skills learned ",
       "mood": "Okay"
     },
     {
       "id": 10,
-      "date": "1/31/2020",
+      "date": "2020-01-31",
       "concept": "ES6 Modules",
       "entry": "Learned how to use import and export to link multiple scripts together, for a single JS file.",
-      "mood": "Okay"
-    },
-    {
-      "id": 11,
-      "date": "1/31/2020",
-      "concept": "Factory Functions",
-      "entry": "Learned about factory functions and how they return objects",
       "mood": "Okay"
     }
   ]
