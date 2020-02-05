@@ -35,13 +35,18 @@
         <label for="moodForTheDay">Mood for the day</label>
         <select name="moodForTheDay" id="moodForTheDay">
           <option value=""></option>
-          <option value="Sad :(">Sad :(</option>
-          <option value="Happy :)">Happy :)</option>
+          <option value="Sad">Sad</option>
+          <option value="Happy">Happy</option>
           <option value="Okay">Okay</option>
         </select>
       </fieldset>
     </form>
     <button type="button" id="recordBtn">Record Journal Entry</button>
+    <fieldset>
+      <label for="filterJournalEntriesByMood"
+        >Filter Journal Entries by Mood</label>
+    </fieldset>
+
     <article class="entryLog"></article>
 
     <script type="module" src="./scripts/journal.js"></script>
