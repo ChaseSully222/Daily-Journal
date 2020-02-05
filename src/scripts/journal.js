@@ -47,7 +47,7 @@ const addRecordAddEventListener = () => {
   });
 };
 
-//Daily Journal 8
+//Daily Journal 8   *REFACTOR THE THREE RADIO BUTTONS INTO ONE FUNCTION*
 // Sad radio button
 const addSadFilterAddEventListener = () => {
   const sadRadioBtn = document.getElementById("sadRadio");
