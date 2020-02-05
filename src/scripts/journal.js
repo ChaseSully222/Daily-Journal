@@ -47,6 +47,46 @@ const addRecordAddEventListener = () => {
   });
 };
 
+//Daily Journal 8
+// Sad radio button
+const addSadFilterAddEventListener = () => {
+  const sadRadioBtn = document.getElementById("sadRadio");
+
+  sadRadioBtn.addEventListener("click", () => {
+    const mood = event.target.value
+    console.log(mood);
+
+    API.getJournalEntries().then(entries =>{
+console.log(entries)
+    })
+
+    
+  });
+};
+
+// Happy radio button
+const addHappyFilterAddEventListener = () => {
+  const happyRadioBtn = document.getElementById("happyRadio");
+
+  happyRadioBtn.addEventListener("click", () => {
+    const mood = event.target.value
+    console.log(mood)
+  });
+};
+
+//Okay radio button
+const addOkayFilterAddEventListener = () => {
+  const okayRadioBtn = document.getElementById("okayRadio");
+
+  okayRadioBtn.addEventListener("click", () => {
+    const mood = event.target.value
+    console.log(mood);
+  });
+};
+
 addRecordAddEventListener();
+addSadFilterAddEventListener();
+addHappyFilterAddEventListener();
+addOkayFilterAddEventListener();
 
 API.getJournalEntries().then(renderJournalEntries);

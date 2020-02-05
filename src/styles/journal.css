@@ -1,4 +1,5 @@
-fieldset {
+.djFieldset {
     display: flex;
     flex-direction: column;
 }
+
