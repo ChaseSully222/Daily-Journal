@@ -46,8 +46,13 @@ const addRecordAddEventListener = () => {
   });
 };
 
-//Daily Journal 8   *REFACTOR THE THREE RADIO BUTTONS INTO ONE FUNCTION*
-// Sad radio button
+//Daily Journal 8 
+
+/*  
+    create a new function to work out of when refactoring code. 
+    const radioMoodBtns = document.getElementsByName("moodbtn")
+    radiomoodbtns.foreach(event listeners)
+*/
 
 const addSadFilterAddEventListener = () => {
   const sadRadioBtn = document.getElementById("sadRadio");

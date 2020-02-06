@@ -76,6 +76,20 @@
       "entry": "Covered the following methods that are available on any array in JS. forEach(), filter(), map(), find(), reduce(), sort()",
       "mood": "Sad",
       "id": 11
+    },
+    {
+      "date": "2020-02-04",
+      "concept": "Deleting Raw Data in an API",
+      "entry": "Learned to use the DELETE verb to remove an object from your API",
+      "mood": "Okay",
+      "id": 12
+    },
+    {
+      "date": "2020-02-06",
+      "concept": "Editing Data",
+      "entry": "Learned how complex implementing an edit feature into an application is.",
+      "mood": "Sad",
+      "id": 13
     }
   ]
 }
