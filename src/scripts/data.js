@@ -1,11 +1,11 @@
 const API = {
   getJournalEntries() {
-    return fetch("http://localhost:3000/entries").then(response =>
+    return fetch("http://localhost:8088/entries").then(response =>
       response.json()
     );
   },
   addNewEntry(newJournalEntry) {
-  return fetch("http://localhost:3000/entries", {
+  return fetch("http://localhost:8088/entries", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

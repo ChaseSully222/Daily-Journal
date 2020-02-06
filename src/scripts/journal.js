@@ -37,7 +37,6 @@ const addRecordAddEventListener = () => {
         API.getJournalEntries().then(renderJournalEntries);
 
         // clears input values
-
         dateInput.value = "";
         conceptInput.value = "";
         entryInput.value = "";
@@ -49,38 +48,57 @@ const addRecordAddEventListener = () => {
 
 //Daily Journal 8   *REFACTOR THE THREE RADIO BUTTONS INTO ONE FUNCTION*
 // Sad radio button
+
 const addSadFilterAddEventListener = () => {
   const sadRadioBtn = document.getElementById("sadRadio");
+  const journalContainer = document.querySelector(".entryLog");
 
   sadRadioBtn.addEventListener("click", () => {
-    const mood = event.target.value
+    const mood = event.target.value;
     console.log(mood);
 
-    API.getJournalEntries().then(entries =>{
-console.log(entries)
-    })
+    API.getJournalEntries().then(entries => {
+      const sadEntries = entries.filter(entry => entry.mood === "Sad");
 
-    
+      journalContainer.textContent = "";
+      renderJournalEntries(sadEntries);
+    });
   });
 };
 
 // Happy radio button
 const addHappyFilterAddEventListener = () => {
   const happyRadioBtn = document.getElementById("happyRadio");
+  const journalContainer = document.querySelector(".entryLog");
 
   happyRadioBtn.addEventListener("click", () => {
-    const mood = event.target.value
-    console.log(mood)
+    const mood = event.target.value;
+    console.log(mood);
+
+    API.getJournalEntries().then(entries => {
+      const happyEntries = entries.filter(entry => entry.mood === "Happy");
+
+      journalContainer.textContent = "";
+      renderJournalEntries(happyEntries);
+    });
   });
 };
 
 //Okay radio button
 const addOkayFilterAddEventListener = () => {
   const okayRadioBtn = document.getElementById("okayRadio");
+  const journalContainer = document.querySelector(".entryLog");
 
   okayRadioBtn.addEventListener("click", () => {
-    const mood = event.target.value
+    const mood = event.target.value;
     console.log(mood);
+
+    API.getJournalEntries().then(entries => {
+      const okayEntries = entries.filter(entry => entry.mood === "Okay");
+
+      journalContainer.textContent = "";
+      renderJournalEntries(okayEntries);
+    });
   });
 };
 

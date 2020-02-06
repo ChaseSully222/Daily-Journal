@@ -5,14 +5,14 @@
       "date": "2020-01-16",
       "concept": "Manipulating DOM",
       "entry": "Learned how to manipulate the DOM with querySelector",
-      "mood": "Okay"
+      "mood": "Happy"
     },
     {
       "id": 2,
       "date": "2020-01-17",
       "concept": "JavaScript Objects",
       "entry": "Learned what an object is and Object Oriented Programming",
-      "mood": "Okay"
+      "mood": "Sad"
     },
     {
       "id": 3,
@@ -33,14 +33,14 @@
       "date": "2020-01-20",
       "concept": "Building DOM Components",
       "entry": "",
-      "mood": "Okay"
+      "mood": "Sad"
     },
     {
       "id": 6,
       "date": "2020-01-21",
       "concept": "Building and Using an API",
       "entry": "Learned about API's, how to create an API and fetch data from that API ",
-      "mood": "Okay"
+      "mood": "Happy"
     },
     {
       "id": 7,
@@ -74,7 +74,7 @@
       "date": "2020-02-03",
       "concept": "Filtering Data with Array Methods",
       "entry": "Covered the following methods that are available on any array in JS. forEach(), filter(), map(), find(), reduce(), sort()",
-      "mood": "Okay",
+      "mood": "Sad",
       "id": 11
     }
   ]
