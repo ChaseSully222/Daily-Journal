@@ -73,7 +73,7 @@
     {
       "date": "2020-02-03",
       "concept": "Filtering Data with Array Methods",
-      "entry": "Covered the following methods that are available on any array in JS. forEach(), filter(), map(), find(), reduce(), sort()",
+      "entry": "Covered the following methods that are available on any array in JS. forEach, filter, map, find, reduce, sort",
       "mood": "Sad",
       "id": 11
     },

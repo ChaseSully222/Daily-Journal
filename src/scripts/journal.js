@@ -6,6 +6,11 @@ import API from "./data.js";
 import renderJournalEntries from "./entriesDOM.js";
 
 //Daily Journal 7
+/*
+    Function that adds an event listener to the 'Record Journal Entry' button
+    This will add a new Journal Entry to the end of our entries list, but only
+    if the user has a date, concept, entry, and mood. 
+*/
 const addRecordAddEventListener = () => {
   const recordButton = document.getElementById("recordBtn");
 
@@ -46,70 +51,31 @@ const addRecordAddEventListener = () => {
   });
 };
 
-//Daily Journal 8 
-
-/*  
-    create a new function to work out of when refactoring code. 
-    const radioMoodBtns = document.getElementsByName("moodbtn")
-    radiomoodbtns.foreach(event listeners)
+//Daily Journal 8
+/*
+    function that adds an event listener to each of our radio mood buttons. 
+    When clicked, they will each filter the journal entries by whichever mood was selected
 */
-
-const addSadFilterAddEventListener = () => {
-  const sadRadioBtn = document.getElementById("sadRadio");
+const addMoodFilterAddEventListener = () => {
+  const radioMoodBtns = document.getElementsByName("moodbtn");
   const journalContainer = document.querySelector(".entryLog");
 
-  sadRadioBtn.addEventListener("click", () => {
-    const mood = event.target.value;
-    console.log(mood);
+  radioMoodBtns.forEach(mood => {
+    mood.addEventListener("click", () => {
+      const mood = event.target.value;
 
-    API.getJournalEntries().then(entries => {
-      const sadEntries = entries.filter(entry => entry.mood === "Sad");
+      API.getJournalEntries().then(entries => {
+        const allEntries = entries.filter(entry => entry.mood === mood);
 
-      journalContainer.textContent = "";
-      renderJournalEntries(sadEntries);
+        journalContainer.textContent = "";
+        renderJournalEntries(allEntries);
+      });
     });
   });
 };
 
-// Happy radio button
-const addHappyFilterAddEventListener = () => {
-  const happyRadioBtn = document.getElementById("happyRadio");
-  const journalContainer = document.querySelector(".entryLog");
-
-  happyRadioBtn.addEventListener("click", () => {
-    const mood = event.target.value;
-    console.log(mood);
-
-    API.getJournalEntries().then(entries => {
-      const happyEntries = entries.filter(entry => entry.mood === "Happy");
-
-      journalContainer.textContent = "";
-      renderJournalEntries(happyEntries);
-    });
-  });
-};
-
-//Okay radio button
-const addOkayFilterAddEventListener = () => {
-  const okayRadioBtn = document.getElementById("okayRadio");
-  const journalContainer = document.querySelector(".entryLog");
-
-  okayRadioBtn.addEventListener("click", () => {
-    const mood = event.target.value;
-    console.log(mood);
-
-    API.getJournalEntries().then(entries => {
-      const okayEntries = entries.filter(entry => entry.mood === "Okay");
-
-      journalContainer.textContent = "";
-      renderJournalEntries(okayEntries);
-    });
-  });
-};
-
+//Calls our functions
 addRecordAddEventListener();
-addSadFilterAddEventListener();
-addHappyFilterAddEventListener();
-addOkayFilterAddEventListener();
+addMoodFilterAddEventListener();
 
 API.getJournalEntries().then(renderJournalEntries);
