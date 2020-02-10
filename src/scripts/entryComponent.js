@@ -4,6 +4,7 @@ const makeJournalEntryComponent = journalEntry => {
     <section>${journalEntry.date}</section>
     <article>${journalEntry.entry}</article>
     <article>${journalEntry.mood}</article>
+    <button id="deleteJournalEntry--${journalEntry.id}" class="deleteBtn">Delete</button>
     `;
 };
 
