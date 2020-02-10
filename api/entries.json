@@ -90,34 +90,6 @@
       "entry": "Learned how complex implementing an edit feature into an application is.",
       "mood": "Sad",
       "id": 13
-    },
-    {
-      "date": "2020-02-10",
-      "concept": "Delete Test",
-      "entry": "Testing Delete feature",
-      "mood": "Okay",
-      "id": 14
-    },
-    {
-      "date": "2020-02-10",
-      "concept": "Delete test 2",
-      "entry": "Testing Delete Feature",
-      "mood": "Okay",
-      "id": 15
-    },
-    {
-      "date": "2020-02-10",
-      "concept": "Delete test 3",
-      "entry": "testing delete feature",
-      "mood": "Sad",
-      "id": 16
-    },
-    {
-      "date": "2020-02-10",
-      "concept": "delete test 4",
-      "entry": "testing delete feature",
-      "mood": "Happy",
-      "id": 17
     }
   ]
 }

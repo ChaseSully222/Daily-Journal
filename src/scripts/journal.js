@@ -39,7 +39,7 @@ const addRecordAddEventListener = () => {
       };
 
       //clears entries list before updating DOM
-      entryDom.textContent="";
+      entryDom.textContent = "";
 
       // refactor the lines below to a condensed version, syntax post.then(get).then(render)
       API.addNewEntry(newJournalEntry).then(() => {
@@ -78,8 +78,29 @@ const addMoodFilterAddEventListener = () => {
   });
 };
 
+//Daily Journal 9
+
+const entryDeleteEventListener = () => {
+  const entryList = document.querySelector("#entryLog");
+
+  entryList.addEventListener("click", event => {
+    if (event.target.id.startsWith("deleteJournalEntry--")) {
+      const deleteBtnId = event.target.id;
+      const deleteBtnArray = deleteBtnId.split("--");
+      const entryIdToDelete = deleteBtnArray[1];
+
+      const entryId = event.target.id.split("--")[1];
+
+      API.deleteEntry(entryIdToDelete)
+        .then(API.getJournalEntries)
+        .then(renderJournalEntries);
+    }
+  }); 
+};
+
 //Calls our functions
 addRecordAddEventListener();
 addMoodFilterAddEventListener();
+entryDeleteEventListener();
 
 API.getJournalEntries().then(renderJournalEntries);
