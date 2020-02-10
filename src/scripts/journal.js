@@ -19,6 +19,7 @@ const addRecordAddEventListener = () => {
     const conceptInput = document.getElementById("concepts");
     const entryInput = document.getElementById("journalEntry");
     const moodInput = document.getElementById("moodForTheDay");
+    const entryDom = document.getElementById("entryLog");
 
     //if else conditional goes here
     if (dateInput.value === "") {
@@ -36,6 +37,9 @@ const addRecordAddEventListener = () => {
         entry: entryInput.value,
         mood: moodInput.value
       };
+
+      //clears entries list before updating DOM
+      entryDom.textContent="";
 
       // refactor the lines below to a condensed version, syntax post.then(get).then(render)
       API.addNewEntry(newJournalEntry).then(() => {
@@ -58,7 +62,7 @@ const addRecordAddEventListener = () => {
 */
 const addMoodFilterAddEventListener = () => {
   const radioMoodBtns = document.getElementsByName("moodbtn");
-  const journalContainer = document.querySelector(".entryLog");
+  const journalContainer = document.querySelector("#entryLog");
 
   radioMoodBtns.forEach(mood => {
     mood.addEventListener("click", () => {
