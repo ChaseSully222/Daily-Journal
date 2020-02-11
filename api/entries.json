@@ -97,6 +97,13 @@
       "entry": "School closed due to weather. Worked on previous exercises and catch up on Daily Journals",
       "mood": "Happy",
       "id": 14
+    },
+    {
+      "date": "2020-02-10",
+      "concept": "Object Methods",
+      "entry": "Object Methods allow you to search object key and values, and display them with more ease. Learned the ' for...of ' loop to do this. ",
+      "mood": "Sad",
+      "id": 15
     }
   ]
 }
