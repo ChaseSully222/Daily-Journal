@@ -44,12 +44,18 @@
     </form>
     <button type="button" id="recordBtn">Record Journal Entry</button>
     <button id="saveEntry">Save Entry</button>
-    <fieldset id="radioField">
+
+    <fieldset class="moodFilterSearch">
       <label for="filterJournalEntriesByMood"></label>
       <legend>Filter Journal Entries by Mood</legend>
       <input type="radio" id="sadRadio" name="moodbtn" value="Sad" />Sad
       <input type="radio" id="happyRadio" name="moodbtn" value="Happy" />Happy
       <input type="radio" id="okayRadio" name="moodbtn" value="Okay" />Okay
+    </fieldset>
+
+    <fieldset class="moodFilterSearch">
+      <legend>Search Journal Entries</legend>
+      <input type="text" name="search" id="searchBox" placeholder="Enter Search Term"/>
     </fieldset>
 
     <article id="entryLog"></article>

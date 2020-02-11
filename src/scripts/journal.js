@@ -175,11 +175,30 @@ const addEntrySaveEventListener = () => {
   });
 };
 
+/*
+  Daily Journal 11
+  Added a search bar that will filter journal entries
+*/
+const searchEventListener = () => {
+  const searchInput = document.getElementById("searchBox");
+
+  searchInput.addEventListener("keypress", (event) => {
+    if(event.keyCode === 13){
+    console.log("Hey! You pressed the enter key")
+    const searchTerm = event.target.value
+
+    
+
+    }
+    })
+  }
+
 //Calls our functions
 
 addRecordAddEventListener();
 addMoodFilterAddEventListener();
 entryEditDeleteEventListener();
 addEntrySaveEventListener();
+searchEventListener();
 
 API.getJournalEntries().then(renderJournalEntries);
