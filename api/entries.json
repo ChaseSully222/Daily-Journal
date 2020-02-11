@@ -58,8 +58,8 @@
     },
     {
       "id": 9,
-      "date": "2020-01-27 - 2020-01-30",
-      "concept": "Javascript group project",
+      "date": "2020-01-27",
+      "concept": "Started Javascript group project",
       "entry": "Further developed Javascript skills while working in a group project. Helps re-enforce previous skills learned ",
       "mood": "Happy"
     },
@@ -90,6 +90,13 @@
       "entry": "Learned how complex implementing an edit feature into an application is.",
       "mood": "Sad",
       "id": 13
+    },
+    {
+      "date": "2020-02-07",
+      "concept": "Snow Day",
+      "entry": "School closed due to weather. Worked on previous exercises and catch up on Daily Journals",
+      "mood": "Happy",
+      "id": 14
     }
   ]
 }

@@ -11,17 +11,18 @@
   <body>
     <h1>Daily Journal</h1>
     <form action="">
-      <fieldset class= "djFieldset">
+      <input type="hidden" id="entryId" value="" />
+      <fieldset class="djFieldset">
         <label for="journalDate">Date of Entry</label>
         <input type="date" name="journalDate" id="journalDate" />
       </fieldset>
 
-      <fieldset class= "djFieldset">
+      <fieldset class="djFieldset">
         <label for="concepts">Concepts Covered</label>
         <input type="text" name="concepts" id="concepts" />
       </fieldset>
 
-      <fieldset class= "djFieldset">
+      <fieldset class="djFieldset">
         <label for="journalEntry">Journal Entry</label>
         <textarea
           name="journalEntry"
@@ -31,7 +32,7 @@
         ></textarea>
       </fieldset>
 
-      <fieldset class= "djFieldset">
+      <fieldset class="djFieldset">
         <label for="moodForTheDay">Mood for the day</label>
         <select name="moodForTheDay" id="moodForTheDay">
           <option value=""></option>
@@ -42,13 +43,13 @@
       </fieldset>
     </form>
     <button type="button" id="recordBtn">Record Journal Entry</button>
-
+    <button id="saveEntry">Save Entry</button>
     <fieldset id="radioField">
       <label for="filterJournalEntriesByMood"></label>
       <legend>Filter Journal Entries by Mood</legend>
-      <input type="radio" id="sadRadio" name="moodbtn" value = "Sad">Sad
-      <input type="radio" id="happyRadio" name="moodbtn" value = "Happy">Happy
-      <input type="radio" id="okayRadio" name="moodbtn" value = "Okay">Okay
+      <input type="radio" id="sadRadio" name="moodbtn" value="Sad" />Sad
+      <input type="radio" id="happyRadio" name="moodbtn" value="Happy" />Happy
+      <input type="radio" id="okayRadio" name="moodbtn" value="Okay" />Okay
     </fieldset>
 
     <article id="entryLog"></article>
