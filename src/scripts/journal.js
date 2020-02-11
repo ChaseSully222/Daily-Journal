@@ -5,8 +5,42 @@
 import API from "./data.js";
 import renderJournalEntries from "./entriesDOM.js";
 
-//Daily Journal 7
-/*
+const clearForm = () => {
+  const dateInput = document.getElementById("journalDate");
+  const conceptInput = document.getElementById("concepts");
+  const entryInput = document.getElementById("journalEntry");
+  const moodInput = document.getElementById("moodForTheDay");
+
+  (dateInput.value = ""),
+    (conceptInput.value = ""),
+    (entryInput.value = ""),
+    (moodInput.value = "");
+};
+
+//Added to the edit feature, When edit button is 'clicked' page will scroll to the top
+const topFunction = () => {
+  document.documentElement.scrollTop = 0;
+};
+
+// Updates our form fields with the input values of whatever 'edit' button was selected
+const updateFormFields = entryId => {
+  const hiddenEntryId = document.getElementById("entryId");
+
+  const dateInput = document.getElementById("journalDate");
+  const conceptInput = document.getElementById("concepts");
+  const entryInput = document.getElementById("journalEntry");
+  const moodInput = document.getElementById("moodForTheDay");
+
+  API.editEntry(entryId).then(entry => {
+    hiddenEntryId.value = entry.id;
+    dateInput.value = entry.date;
+    conceptInput.value = entry.concept;
+    entryInput.value = entry.entry;
+    moodInput.value = entry.mood;
+  });
+};
+
+/*  Daily Journal 7
     Function that adds an event listener to the 'Record Journal Entry' button
     This will add a new Journal Entry to the end of our entries list, but only
     if the user has a date, concept, entry, and mood. 
@@ -78,9 +112,12 @@ const addMoodFilterAddEventListener = () => {
   });
 };
 
-//Daily Journal 9
+/*
+  Daily Journal 9 & 10
+  Added a delete and edit feature
+*/
 
-const entryDeleteEventListener = () => {
+const entryEditDeleteEventListener = () => {
   const entryList = document.querySelector("#entryLog");
 
   entryList.addEventListener("click", event => {
@@ -94,13 +131,55 @@ const entryDeleteEventListener = () => {
       API.deleteEntry(entryIdToDelete)
         .then(API.getJournalEntries)
         .then(renderJournalEntries);
+    } else if (event.target.id.startsWith("editJournalEntry--")) {
+      const entryIdToEdit = event.target.id.split("--")[1];
+      topFunction();
+      updateFormFields(entryIdToEdit);
     }
-  }); 
+  });
+};
+
+//Daily Journal 10 cont... Added Save button and event listener
+
+const addEntrySaveEventListener = () => {
+  const saveButton = document.getElementById("saveEntry");
+
+  saveButton.addEventListener("click", () => {
+    const entryIdInput = document.getElementById("entryId");
+    const dateInput = document.getElementById("journalDate");
+    const conceptInput = document.getElementById("concepts");
+    const entryInput = document.getElementById("journalEntry");
+    const moodInput = document.getElementById("moodForTheDay");
+
+    const entry = {
+      date: dateInput.value,
+      concept: conceptInput.value,
+      entry: entryInput.value,
+      mood: moodInput.value
+    };
+
+    if (entryIdInput.value !== "") {
+      entry.id = parseInt(entryIdInput.value);
+      API.updateEntry(entry).then(() => {
+        API.getJournalEntries()
+          .then(renderJournalEntries)
+          .then(clearForm);
+      });
+    } else {
+      API.addNewEntry(entry).then(() => {
+        API.getJournalEntries()
+          .then(renderJournalEntries)
+          .then(clearForm);
+      });
+    }
+  });
 };
 
 //Calls our functions
+
 addRecordAddEventListener();
 addMoodFilterAddEventListener();
-entryDeleteEventListener();
+entryEditDeleteEventListener();
+addEntrySaveEventListener();
 
 API.getJournalEntries().then(renderJournalEntries);
