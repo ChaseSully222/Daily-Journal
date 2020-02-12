@@ -181,17 +181,18 @@ const addEntrySaveEventListener = () => {
 */
 const searchEventListener = () => {
   const searchInput = document.getElementById("searchBox");
+  const entryLogEl = document.getElementById("entryLog");
+  const entry = API.getJournalEntries;
 
-  searchInput.addEventListener("keypress", (event) => {
-    if(event.keyCode === 13){
-    console.log("Hey! You pressed the enter key")
-    const searchTerm = event.target.value
-
-    
-
+  searchInput.addEventListener("keypress", event => {
+    if (event.keyCode === 13) {
+      const searchInputValue = event.target.value.toUpperCase();
+      console.log(searchInputValue);
+      API.getJournalEntries().then
+      searchInput.value = "";
     }
-    })
-  }
+  });
+};
 
 //Calls our functions
 
